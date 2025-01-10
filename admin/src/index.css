@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Prata&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.prata-regular {
+  font-family: 'Prata', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Outfit', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.active {
+  background-color: #ffebf5;
+  border-color: #c586a5;
+}
