@@ -91,9 +91,7 @@ const ShopContextProvider = (props) => {
 
   const getUserCart = useCallback(
     async (token) => {
-      console.log('token 01', token);
       try {
-        console.log('log 01');
         const response = await axios.post(
           backendUrl + '/api/cart/get',
           {},
@@ -102,7 +100,6 @@ const ShopContextProvider = (props) => {
         if (response.data.success) {
           setCartItems(response.data.cartData);
         }
-        console.log('response', response);
       } catch (error) {
         console.log(error);
         toast.error(error.message);

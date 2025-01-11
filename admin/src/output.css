@@ -561,6 +561,11 @@ video {
   margin-right: auto;
 }
 
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -584,6 +589,10 @@ video {
 
 .mt-4{
   margin-top: 1rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
 }
 
 .block{
@@ -662,6 +671,10 @@ video {
   cursor: pointer;
 }
 
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-\[1fr_3fr_1fr\]{
   grid-template-columns: 1fr 3fr 1fr;
 }
@@ -719,12 +732,21 @@ video {
   border-width: 1px;
 }
 
+.border-2{
+  border-width: 2px;
+}
+
 .border-r-0{
   border-right-width: 0px;
 }
 
 .border-r-2{
   border-right-width: 2px;
+}
+
+.border-gray-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
 }
 
 .border-gray-300{
@@ -765,6 +787,14 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.p-5{
+  padding: 1.25rem;
+}
+
+.p-2{
+  padding: 0.5rem;
 }
 
 .px-2{
@@ -817,6 +847,11 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-0\.5{
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
 .pl-\[20\%\]{
   padding-left: 20%;
 }
@@ -857,12 +892,21 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
 
 .font-medium{
   font-weight: 500;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
 
 .text-gray-600{
@@ -922,6 +966,10 @@ textarea {
 }
 
 @media (min-width: 640px){
+  .sm\:grid-cols-\[0\.5fr_2fr_1fr\]{
+    grid-template-columns: 0.5fr 2fr 1fr;
+  }
+
   .sm\:flex-row{
     flex-direction: row;
   }
@@ -939,9 +987,23 @@ textarea {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+
+  .sm\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .sm\:text-\[15px\]{
+    font-size: 15px;
+  }
 }
 
 @media (min-width: 768px){
+  .md\:my-4{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
   .md\:block{
     display: block;
   }
@@ -954,7 +1016,17 @@ textarea {
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
   }
 
+  .md\:p-8{
+    padding: 2rem;
+  }
+
   .md\:text-center{
     text-align: center;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:grid-cols-\[0\.5fr_2fr_1fr_1fr_1fr\]{
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
   }
 }
