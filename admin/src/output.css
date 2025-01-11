@@ -594,6 +594,10 @@ video {
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
 .hidden{
   display: none;
 }
@@ -604,6 +608,10 @@ video {
 
 .min-h-screen{
   min-height: 100vh;
+}
+
+.w-12{
+  width: 3rem;
 }
 
 .w-20{
@@ -652,6 +660,14 @@ video {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.grid-cols-\[1fr_3fr_1fr\]{
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.grid-cols-\[1fr_3fr_1fr_1fr_1fr\]{
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
 }
 
 .flex-col{
@@ -721,6 +737,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gray-50{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
@@ -744,6 +765,11 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-3{
@@ -799,6 +825,14 @@ video {
   padding-top: 1.5rem;
 }
 
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -811,6 +845,11 @@ video {
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm{
@@ -905,5 +944,17 @@ textarea {
 @media (min-width: 768px){
   .md\:block{
     display: block;
+  }
+
+  .md\:grid{
+    display: grid;
+  }
+
+  .md\:grid-cols-\[1fr_3fr_1fr_1fr_1fr\]{
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+  }
+
+  .md\:text-center{
+    text-align: center;
   }
 }

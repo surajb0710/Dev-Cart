@@ -12,7 +12,6 @@ const BestSeller = () => {
     const bestSeller = products.products.filter(
       (product) => product.bestseller
     );
-
     setbestSellerProducts(bestSeller.slice(0, 5));
   }, [products.products]);
 
