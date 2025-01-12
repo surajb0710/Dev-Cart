@@ -9,6 +9,7 @@ import {
   allOrders,
   userOrders,
   updateOrderStatus,
+  verifyStripe,
 } from '../controllers/orderController.js';
 
 const orderRouter = express.Router();
@@ -24,5 +25,8 @@ orderRouter.post('/stripe', authUser, placeOrderStripe);
 
 //User Features
 orderRouter.post('/userorders', authUser, userOrders);
+
+//Verify Payment
+orderRouter.post('/verifyStripe', authUser, verifyStripe);
 
 export default orderRouter;
