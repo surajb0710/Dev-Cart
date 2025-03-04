@@ -5,7 +5,7 @@ import App from './App.jsx';
 import ShopContextProvider from './context/ShopContextProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/">
     <ShopContextProvider>
       <App />
     </ShopContextProvider>
