@@ -12,10 +12,6 @@ const Collection = () => {
   const [subCategory, setSubCategory] = useState([]);
   const [sortType, setSortType] = useState('relevance');
 
-  useEffect(() => {
-    setFilterProducts(products);
-  }, [products]);
-
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
       setCategory((prev) => prev.filter((item) => item !== e.target.value));
@@ -60,23 +56,25 @@ const Collection = () => {
 
     switch (sortType) {
       case 'low-high':
-        setFilterProducts(sortedProductsList.sort((a, b) => a.price - b.price));
+        sortedProductsList.sort((a, b) => a.price - b.price);
         break;
-
       case 'high-low':
-        setFilterProducts(sortedProductsList.sort((a, b) => b.price - a.price));
+        sortedProductsList.sort((a, b) => b.price - a.price);
         break;
-
       default:
-        applyFilter();
-        break;
+        return;
     }
-  }, [filterProducts, sortType, applyFilter]);
+
+    setFilterProducts([...sortedProductsList]);
+  }, [filterProducts, sortType]);
 
   useEffect(() => {
     applyFilter();
+  }, [products, category, subCategory, showSearch, search, applyFilter]);
+
+  useEffect(() => {
     sortProducts();
-  }, [applyFilter, sortProducts]);
+  }, [sortType, sortProducts]);
 
   return (
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">

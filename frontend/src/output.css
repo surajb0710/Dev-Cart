@@ -846,6 +846,14 @@ video {
   width: 100%;
 }
 
+.w-\[50px\]{
+  width: 50px;
+}
+
+.w-\[100px\]{
+  width: 100px;
+}
+
 .min-w-2{
   min-width: 0.5rem;
 }
@@ -988,6 +996,10 @@ video {
   overflow-x: auto;
 }
 
+.\!rounded-\[30px\]{
+  border-radius: 30px !important;
+}
+
 .rounded{
   border-radius: 0.25rem;
 }
@@ -998,6 +1010,14 @@ video {
 
 .rounded-sm{
   border-radius: 0.125rem;
+}
+
+.\!rounded-\[50px\]{
+  border-radius: 50px !important;
+}
+
+.rounded-\[50px\]{
+  border-radius: 50px;
 }
 
 .border{
